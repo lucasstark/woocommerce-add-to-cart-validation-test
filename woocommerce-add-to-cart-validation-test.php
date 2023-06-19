@@ -104,8 +104,8 @@ class WC_Add_To_Cart_Validation_Test {
 		$debug_wc_notice       = isset( $_POST['debug_wc_notice'] ) ? sanitize_text_field( $_POST['debug_wc_notice'] ) : 'no';
 
 		// Add cart item data with the debug values.
-		$cart_item_data['debug_fail_validation'] = sanitize_text_field( $_POST['debug_fail_validation'] );
-		$cart_item_data['debug_wc_notice']       = sanitize_text_field( $_POST['debug_wc_notice'] );
+		$cart_item_data['debug_fail_validation'] = $debug_fail_validation;
+		$cart_item_data['debug_wc_notice']       = $debug_wc_notice;
 
 		return $cart_item_data;
 	}
